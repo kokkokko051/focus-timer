@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!--<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">-->
+        <title>timer</title>
+        <script src="timer.js" defer></script>
+        <link rel="stylesheet" href="timer.css">
+        <link rel="icon" href="time">
+        <link rel="shortcut icon" href="timer.svg">
+    </head>
+    <body>
+        <header>
+            <div class="hamburger-menu">
+                <input type="checkbox" id="menu-btn-check">
+                <label for="menu-btn-check" class="menu-btn" onclick="closeD('ham')"><span></span></label>
+                <!--ここからメニュー-->
+                <div class="menu-content">
+                    <ul>
+                        <li>
+                            <label for="menu-btn-check" onclick="openD('save')">保存</label>
+                        </li>
+                        <li>
+                            <label for="menu-btn-check" onclick="alert('share')">共有</label>
+                        </li>
+                        <li>
+                            <label for="menu-btn-check" onclick="alert('another')">another</label>
+                      </li>
+                    </ul>
+                </div>
+                <!--ここまでメニュー-->
+            </div>
+        </header>
+        <div class="focus timer" id="ft">
+            <input type="text" id="focus" value="集中">
+            <h2><span id="hour1">00</span>:<span id="minute1">00</span>:<span id="second1">00</span></h2>
+        </div>
+        <div class="rest timer" id="rt">
+            <input type="text" id="rest" value="休憩">
+            <h2><span id="hour2">00</span>:<span id="minute2">00</span>:<span id="second2">00</span></h2>
+        </div>
+        <div class = "button">
+            <button type="button" id="button" onclick=button(); value="1">集中開始</button>
+        </div>
+        <div class="wdia" id="save"><!-- save-->
+            <div class="dialog">
+                <h2>保存方法</h2>
+                <p class="yes"><span>ブラウザに保存</span></p>
+                <p onclick="openD('browser')"><span>ブラウザに保存されている</span><span>データを全て保存</span></p>
+                <p class="no"><span>テキストファイルで保存</span></p>
+                <p class="no"><span>画像ファイルで保存</span></p>
+                <p class="no"><span>ファイルで保存</span></p>
+                <p class="no"><span>クリップボードに保存</span></p>
+            </div>
+            <button type="button" onclick="closeD('save');" class="close">close</button>
+            <div class="wdia" id="browser">
+                <div class="dialog"><!--all browser-->
+                    <h2><span>ブラウザに保存されている</span><span>データを全て保存</span></h2>
+                    <p class="no"><span>テキストファイルで保存</span></p>
+                    <p class="no"><span>画像ファイルで保存</span></p>
+                    <p class="no"><span>htmlファイルで保存</span></p>
+                </div>
+                <button type="button" onclick="closeD('browser');" class="close">close</button>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,181 @@
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin: inherit;
+}
+.timer h2{
+    display: flex;
+    justify-content: center;
+    font-size: 900%;
+    margin: 2%;
+}
+input{
+    font-size: 500%;
+}
+button{
+    font-size: 400%;
+    padding: 2%;
+    margin: 2%;
+    border-radius: 30px;
+}
+.timer{
+    height: 40%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    padding-inline: 10%;
+    backdrop-filter: inherit;
+    border-radius: 30px;
+}
+.rest{
+    background-color: aqua;
+}
+.focus{
+    background-color: darkseagreen;
+}
+.button{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.wdia{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: brightness(0.7) blur(3px);
+}
+.dialog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid;
+    background-color: white;
+    border-radius: 30px;
+    width: 60%;
+}
+p{
+    font-size: 100%;
+}
+.no{
+    opacity: 0.5;
+}
+.yes{
+    background-color: yellow;
+}
+.dialog p {
+    border-top: solid gray;
+    width: 96%;
+    font-size: 200%;
+    margin: inherit;
+    display: flex;
+    flex-direction: column;
+}
+.dialog span{
+    display: flex;
+    justify-content: center;
+}
+.dialog h2{
+    font-size: 225%;
+    margin: inherit;
+}
+.close{
+    margin: 50px;
+    font-size: 200%;
+    border-radius: 30px;
+}
+.menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #3584bb;
+}
+.menu-btn span, .menu-btn span:before, .menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+}
+.menu-btn span:before {
+    bottom: 8px;
+}
+.menu-btn span:after {
+    top: 8px;
+}
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+#menu-btn-check {
+    display: none;
+}
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    background-color: #3584bb;
+}
+.menu-content ul {
+    padding: 70px 10px 0;
+}
+.menu-content ul li {
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+}
+.menu-content ul li label {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color:#ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+    padding: inherit;
+}
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 80;
+    background-color: #3584bb;
+    transition: all 0.5s;
+}
+#menu-btn-check:checked ~ .menu-content {
+    left: 0;
+}
