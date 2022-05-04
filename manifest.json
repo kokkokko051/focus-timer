@@ -1,0 +1,16 @@
+{
+    "name" : "focus timer & todo",
+    "short_name" : "timer & todo",
+    "description" : "集中したいときに使えるタイマーとリストです",
+    "icons" : [
+        {
+            "src" : "p.png",
+            "size" : "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url" : "pwa.html",
+    "dispaly" : "fullscreen",
+    "theme_color" : "#fff",
+    "backgrounf_color" : "#fff"
+}
